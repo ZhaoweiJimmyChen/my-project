@@ -323,6 +323,16 @@ a:focus-visible {
   background: var(--soft-row);
 }
 
+.interactive-list li {
+  transition: background-color 180ms ease, padding 180ms ease;
+}
+
+.interactive-list li:hover {
+  padding-right: 12px;
+  padding-left: calc(1.25rem + 12px);
+  background: var(--soft-row);
+}
+
 .author-self,
 .journal-name {
   color: var(--heading-blue);
@@ -352,6 +362,7 @@ a:focus-visible {
 
 .teaching-entry:hover {
   padding-right: 12px;
+  padding-left: 64px;
   background: var(--soft-row);
 }
 
