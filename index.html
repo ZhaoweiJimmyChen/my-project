@@ -1,93 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jimmy Chen — Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic profile of Dr. Jimmy Zhaowei Chen, Assistant Professor at HKMU.">
+  <title>Dr. Jimmy Zhaowei Chen | Academic Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<header class="hero">
-  <nav>
-    <div class="logo">Jimmy Chen</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="site-mark" href="index.html">Jimmy Chen</a>
+    <div class="nav-links">
+      <a class="active" href="index.html" aria-current="page">Home</a>
+      <span aria-hidden="true">·</span>
+      <a href="research.html">Research</a>
+      <span aria-hidden="true">·</span>
+      <a href="teaching.html">Teaching</a>
+      <span aria-hidden="true">·</span>
+      <a href="awards-service.html">Awards &amp; Service</a>
+    </div>
   </nav>
 
-  <div class="hero-content">
-    <h1>Hi, I'm <span>Jimmy Chen</span></h1>
-    <p>Software Engineer building thoughtful products & tools.</p>
-    <div class="hero-buttons">
-      <a href="#projects" class="btn btn-primary">View My Work</a>
-      <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I'm a software engineer passionate about building clean, useful, and reliable software.
-      I enjoy solving hard problems, learning new technologies, and collaborating with teams
-      to ship products that matter. This is placeholder text — replace it with your own story.
-    </p>
-  </section>
-
-  <section id="projects" class="section alt">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Project One</h3>
-        <p>A short description of what this project does and the problem it solves.</p>
-        <a href="#" class="card-link">View Project →</a>
+  <header class="profile-hero">
+    <div class="hero-inner">
+      <div class="profile-avatar" aria-label="Initials JC">
+        <!-- TODO: replace this initials avatar with <img src="photo.jpeg"> once the photo is uploaded -->
+        <span>JC</span>
       </div>
-      <div class="card">
-        <h3>Project Two</h3>
-        <p>A short description of what this project does and the problem it solves.</p>
-        <a href="#" class="card-link">View Project →</a>
-      </div>
-      <div class="card">
-        <h3>Project Three</h3>
-        <p>A short description of what this project does and the problem it solves.</p>
-        <a href="#" class="card-link">View Project →</a>
+      <div class="profile-intro">
+        <p class="eyebrow">Academic Profile</p>
+        <h1>Dr. Jimmy Zhaowei Chen</h1>
+        <p class="profile-title">Assistant Professor at Lee Shau Kee School of Business and Administration, HKMU</p>
+        <address class="contact-line">
+          <a href="mailto:jzwchen@hkmu.edu.hk">Email jzwchen@hkmu.edu.hk</a>
+          <span aria-hidden="true">·</span>
+          <span>Phone +852 2768 6946</span>
+        </address>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <span class="skill">JavaScript</span>
-      <span class="skill">Python</span>
-      <span class="skill">React</span>
-      <span class="skill">Node.js</span>
-      <span class="skill">SQL</span>
-      <span class="skill">Git</span>
-    </div>
-  </section>
+  <main id="main-content" class="content-shell">
+    <section class="content-section reveal" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>Dr. Jimmy Zhaowei Chen is an assistant professor at Lee Shau Kee School of Business and Administration, HKMU. His research interests include sustainability, nonmarket strategy, and the application of AI technologies in management. His research has been published in leading journals including Proceedings of the National Academy of Sciences, Journal of World Business, Global Strategy Journal, as well as book chapters in edited books such as the Handbook of International Business Policy. His research has received recognition, including a finalist nomination for the Journal of World Business Best Paper Award in 2023. Prior to joining HKMU, Dr Chen received his Ph.D. degree from the National University of Singapore. Within the academic community, he serves as an organizing committee member and seminar host/moderator at the China Business Research Network. He also served as the Program Coordinator and Assistant for the Academy of International Business Conference 2021 Pre-Conference and the Academy of International Business Conference 2022 in Miami.</p>
+    </section>
+  </main>
 
-  <section id="contact" class="section alt">
-    <h2>Get In Touch</h2>
-    <p>Interested in working together or just want to say hi? Reach out below.</p>
-    <div class="contact-links">
-      <a href="mailto:you@example.com">you@example.com</a>
-      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </section>
-</main>
+  <footer class="site-footer">
+    <p>Dr. Jimmy Zhaowei Chen</p>
+  </footer>
 
-<footer>
-  <p>&copy; <span id="year"></span> Jimmy Chen. All rights reserved.</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

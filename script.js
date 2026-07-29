@@ -1,12 +1,20 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+const revealSections = document.querySelectorAll(".reveal");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.querySelector(".nav-links");
+if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+  revealSections.forEach((section) => section.classList.add("is-visible"));
+} else {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
 
-navToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
-
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => navLinks.classList.remove("open"));
-});
+  revealSections.forEach((section) => revealObserver.observe(section));
+}
