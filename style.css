@@ -554,6 +554,35 @@ a:focus-visible {
   background: var(--soft-row);
 }
 
+.numbered-list {
+  counter-reset: numbered;
+}
+
+.publication-list.numbered-list li {
+  position: relative;
+  padding-left: 52px;
+  counter-increment: numbered;
+}
+
+.publication-list.numbered-list li:hover {
+  padding-left: 64px;
+}
+
+.publication-list.numbered-list li::before {
+  content: counter(numbered, decimal-leading-zero);
+  position: absolute;
+  top: 26px;
+  left: 0;
+  color: var(--heading-blue);
+  font-family: var(--heading-serif);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.publication-list.numbered-list li:first-child::before {
+  top: 2px;
+}
+
 .interactive-list li {
   transition: background-color 180ms ease, padding 180ms ease;
 }
