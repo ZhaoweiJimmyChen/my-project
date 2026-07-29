@@ -141,137 +141,144 @@ a:focus-visible {
 
 /* About page: profile composition modelled on the Jia Nan faculty profile. */
 .about-page .site-nav {
+  width: 100%;
+  min-height: 121px;
+  padding: 20px 50px 0;
+  display: grid;
+  grid-template-rows: 51px 40px;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
   border-bottom: 0;
 }
 
+.about-page .site-mark {
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 26px;
+  letter-spacing: 0.02em;
+}
+
+.about-page .nav-links {
+  justify-content: center;
+  gap: 0;
+  font-family: var(--source-sans);
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 16.25px;
+  text-transform: uppercase;
+}
+
+.about-page .nav-links span {
+  display: none;
+}
+
+.about-page .nav-links a {
+  padding: 12px 10px;
+  color: var(--ink);
+}
+
 .person-profile {
-  width: min(calc(100% - 80px), 1178px);
-  margin: 0 auto;
-  padding: 85px 0 100px;
+  width: min(100%, 1280px);
+  margin: 50px auto 0;
+  padding: 0 50px 100px;
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  grid-template-columns: minmax(0, 590px) minmax(0, 590px);
   align-items: start;
-  column-gap: clamp(56px, 8vw, 112px);
+  column-gap: 0;
 }
 
 .person-biography {
-  padding-top: 54px;
+  padding: 125px 0 0 50px;
 }
 
 .person-biography h1 {
   position: relative;
-  margin: 0;
+  margin: 21px -1.564px 0 0;
   color: var(--ink);
   font-family: var(--display);
   font-size: 46px;
   font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1.06;
+  letter-spacing: 0.034em;
+  line-height: 48.76px;
 }
 
 .person-biography h1::before,
-.person-biography h1::after,
-.person-biography h1 span::before {
+.person-biography h1::after {
   position: absolute;
   left: -100px;
   width: 90px;
-  height: 1px;
+  height: 20px;
   content: "";
   opacity: 0.5;
-  border-top: 1px solid #8f8a8d;
-  border-bottom: 1px solid #8f8a8d;
+  border-top: 1px solid #990000;
+  border-bottom: 1px solid #990000;
   transform: skewY(-22deg);
   transform-origin: 100% 0;
 }
 
 .person-biography h1::before {
-  top: 11px;
-  padding: 8px 0 10px;
+  top: 9px;
 }
 
 .person-biography h1::after {
-  top: 20px;
-  padding: 8px 0 10px;
+  top: 18px;
 }
 
 .person-appointments {
-  margin: 24px 0 35px;
+  width: 540px;
+  margin: 7px 0 0;
   padding: 0;
   list-style: none;
-  color: #545454;
+  color: var(--ink);
   font-family: var(--utility-serif);
-  font-size: 16px;
-  line-height: 1.45;
+  font-size: 13px;
+  line-height: 19.5px;
 }
 
 .person-appointments li {
-  position: relative;
-  padding-left: 19px;
-}
-
-.person-appointments li::before {
-  position: absolute;
-  left: 0;
-  color: #990000;
-  content: "•";
+  padding-left: 0;
 }
 
 .person-description {
-  max-width: 690px;
-  color: #282424;
-  font-family: var(--source-sans);
+  width: 540px;
+  max-width: 100%;
+  margin-top: 41px;
+  color: var(--ink);
+  font-family: var(--utility-serif);
   font-size: 14px;
-  line-height: 1.72;
+  letter-spacing: 0.05em;
+  line-height: 19.5px;
 }
 
 .person-description p {
-  margin: 0;
+  margin: 18px 0 0;
 }
 
 .person-aside {
   min-width: 0;
+  padding-left: 50px;
 }
 
 .portrait-frame {
   position: relative;
-  width: min(100%, 320px);
-  margin-left: auto;
-  padding-right: 17px;
-  padding-bottom: 18px;
+  z-index: 0;
+  width: 540px;
+  max-width: 100%;
+  margin: 28px 0 0;
+  padding: 0;
 }
 
 .portrait-frame::after {
   position: absolute;
   z-index: -1;
-  right: 0;
-  bottom: 0;
-  width: calc(100% - 9px);
-  height: calc(100% - 9px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   content: "";
-  background: #990000;
-}
-
-.portrait-flourish::before,
-.portrait-flourish::after {
-  position: absolute;
-  right: -6px;
-  width: 38px;
-  height: 1px;
-  padding: 8px 0 10px;
-  content: "";
-  opacity: 0.55;
-  border-top: 1px solid #990000;
-  border-bottom: 1px solid #990000;
-  transform: skewY(-30deg);
-  transform-origin: 0 0;
-}
-
-.portrait-flourish::before {
-  bottom: 21px;
-}
-
-.portrait-flourish::after {
-  bottom: 59px;
+  border: 1px solid #990000;
+  transform: translate(-10px, 10px);
 }
 
 .about-page .profile-photo,
@@ -286,7 +293,7 @@ a:focus-visible {
 .about-page .profile-photo {
   position: relative;
   z-index: 1;
-  object-position: center 15%;
+  object-position: center center;
 }
 
 .about-page .profile-placeholder {
@@ -296,7 +303,7 @@ a:focus-visible {
 }
 
 .person-links {
-  margin-top: 34px;
+  margin-top: 124px;
   padding-left: 20px;
   color: #545454;
   font-family: var(--source-sans);
@@ -304,14 +311,12 @@ a:focus-visible {
 
 .person-links address {
   margin: 0;
-  padding: 13px 0;
-  border-top: 1px solid #b0b0b0;
-  border-bottom: 1px solid #b0b0b0;
+  padding: 0;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.13em;
-  line-height: 1.8;
+  line-height: 16.8px;
 }
 
 .person-links address a,
@@ -321,10 +326,16 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
+.person-links address a {
+  width: fit-content;
+  padding: 0.6px 0;
+  border-bottom: 1px solid #ffcc00;
+}
+
 .person-links nav {
   display: grid;
   gap: 7px;
-  margin-top: 13px;
+  margin-top: 12px;
 }
 
 .person-links nav a {
@@ -342,30 +353,33 @@ a:focus-visible {
 }
 
 .person-details {
-  margin: 35px 0 0;
-  padding-right: 20px;
+  width: min(100%, 490px);
+  margin: 86px 0 0;
+  padding-right: 0;
   color: #545454;
   font-family: var(--source-sans);
 }
 
 .person-details h2 {
-  margin: 0 0 12px;
+  margin: 0;
+  padding-bottom: 4px;
   color: #282424;
   font-family: var(--source-sans);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.15em;
-  line-height: 1.15;
+  line-height: 11px;
   text-transform: uppercase;
 }
 
 .person-details p {
-  margin: 8px 0 0;
-  padding-left: 20px;
-  font-size: 10px;
-  font-weight: 700;
+  margin: 12px 0 0;
+  padding-left: 0;
+  color: #282424;
+  font-size: 11px;
+  font-weight: 800;
   letter-spacing: 0.15em;
-  line-height: 1.35;
+  line-height: 11px;
   text-transform: uppercase;
 }
 
@@ -741,8 +755,31 @@ a:focus-visible {
     left: 2px;
   }
 
+  .about-page .site-nav {
+    width: calc(100% - 32px);
+    min-height: auto;
+    padding: 18px 0 14px;
+    display: block;
+  }
+
+  .about-page .site-mark {
+    font-size: 22px;
+  }
+
+  .about-page .nav-links {
+    justify-content: flex-start;
+    gap: 0 0.35rem;
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .about-page .nav-links span {
+    display: inline;
+  }
+
   .person-profile {
     width: calc(100% - 32px);
+    margin: 0 auto;
     padding: 39px 0 68px;
     display: flex;
     flex-direction: column;
@@ -751,43 +788,57 @@ a:focus-visible {
 
   .person-biography {
     width: 100%;
-    padding-top: 0;
+    padding: 0;
     order: 2;
   }
 
   .person-biography h1 {
+    margin: 0;
     font-size: 38px;
+    letter-spacing: 0.02em;
+    line-height: 42px;
   }
 
   .person-biography h1::before,
-  .person-biography h1::after,
-  .person-biography h1 span::before {
+  .person-biography h1::after {
     display: none;
   }
 
   .person-appointments {
+    width: auto;
     margin: 18px 0 28px;
     font-size: 15px;
   }
 
   .person-description {
+    width: auto;
+    margin-top: 0;
     font-size: 14px;
     line-height: 1.7;
   }
 
   .person-aside {
     width: 100%;
+    padding-left: 0;
     order: 1;
   }
 
   .portrait-frame {
     width: min(82%, 280px);
-    margin-left: 0;
+    margin: 0 0 0 10px;
   }
 
   .person-links,
   .person-details {
     max-width: 360px;
+  }
+
+  .person-links {
+    margin-top: 36px;
+  }
+
+  .person-details {
+    margin-top: 40px;
   }
 
   .hero-inner {
