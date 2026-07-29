@@ -7,10 +7,10 @@
   <title>Dr. Jimmy Zhaowei Chen | Academic Profile</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,700|Libre+Caslon+Display|Libre+Caslon+Text:400,700|Lora:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,700|Libre+Caslon+Display|Libre+Caslon+Text:400,700|Lora:400,700|Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="about-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <nav class="site-nav" aria-label="Primary navigation">
@@ -26,29 +26,46 @@
     </div>
   </nav>
 
-  <header class="profile-hero">
-    <div class="hero-inner">
-      <div class="profile-intro">
-        <h1>Dr. Jimmy Zhaowei Chen</h1>
-        <p class="profile-title">Assistant Professor at Lee Shau Kee School of Business and Administration, HKMU</p>
-        <address class="contact-line">
-          <a href="mailto:jzwchen@hkmu.edu.hk">Email jzwchen@hkmu.edu.hk</a>
-          <span aria-hidden="true">·</span>
-          <span>Phone +852 2768 6946</span>
-        </address>
+  <main id="main-content" class="person-profile reveal">
+    <section class="person-biography" aria-labelledby="about-heading">
+      <h1 id="about-heading">Dr. Jimmy Zhaowei Chen</h1>
+      <ul class="person-appointments">
+        <li>Assistant Professor at Lee Shau Kee School of Business and Administration, HKMU</li>
+      </ul>
+      <div class="person-description">
+        <p>Dr. Jimmy Zhaowei Chen is an assistant professor at Lee Shau Kee School of Business and Administration, HKMU. His research interests include sustainability, nonmarket strategy, and the application of AI technologies in management. His research has been published in leading journals including Proceedings of the National Academy of Sciences, Journal of World Business, Global Strategy Journal, as well as book chapters in edited books such as the Handbook of International Business Policy. His research has received recognition, including a finalist nomination for the Journal of World Business Best Paper Award in 2023. Prior to joining HKMU, Dr Chen received his Ph.D. degree from the National University of Singapore. Within the academic community, he serves as an organizing committee member and seminar host/moderator at the China Business Research Network. He also served as the Program Coordinator and Assistant for the Academy of International Business Conference 2021 Pre-Conference and the Academy of International Business Conference 2022 in Miami.</p>
       </div>
-      <div class="profile-media">
+    </section>
+
+    <aside class="person-aside" aria-label="Contact information">
+      <div class="portrait-frame">
+        <span class="portrait-flourish" aria-hidden="true"></span>
         <img class="profile-photo" src="images/profile.jpg" alt="Portrait of Dr. Jimmy Zhaowei Chen" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
         <div class="profile-placeholder" aria-label="Initials JC" hidden>JC</div>
       </div>
-    </div>
-  </header>
-
-  <main id="main-content" class="content-shell">
-    <section class="content-section reveal" aria-labelledby="about-heading">
-      <h2 id="about-heading">About Me</h2>
-      <p>Dr. Jimmy Zhaowei Chen is an assistant professor at Lee Shau Kee School of Business and Administration, HKMU. His research interests include sustainability, nonmarket strategy, and the application of AI technologies in management. His research has been published in leading journals including Proceedings of the National Academy of Sciences, Journal of World Business, Global Strategy Journal, as well as book chapters in edited books such as the Handbook of International Business Policy. His research has received recognition, including a finalist nomination for the Journal of World Business Best Paper Award in 2023. Prior to joining HKMU, Dr Chen received his Ph.D. degree from the National University of Singapore. Within the academic community, he serves as an organizing committee member and seminar host/moderator at the China Business Research Network. He also served as the Program Coordinator and Assistant for the Academy of International Business Conference 2021 Pre-Conference and the Academy of International Business Conference 2022 in Miami.</p>
-    </section>
+      <div class="person-links">
+        <address>
+          <a href="mailto:jzwchen@hkmu.edu.hk">jzwchen@hkmu.edu.hk</a>
+          <span>+852 2768 6946</span>
+        </address>
+        <nav aria-label="Profile pages">
+          <a href="research.html">Research</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="awards-service.html">Awards &amp; Service</a>
+        </nav>
+      </div>
+      <section class="person-details" aria-labelledby="expertise-heading">
+        <h2 id="expertise-heading">Areas of Expertise</h2>
+        <p>Sustainability</p>
+        <p>Nonmarket Strategy</p>
+        <p>AI Technologies in Management</p>
+        <p>Theory of Organizations</p>
+      </section>
+      <section class="person-details" aria-labelledby="school-heading">
+        <h2 id="school-heading">School</h2>
+        <p>Lee Shau Kee School of Business and Administration, HKMU</p>
+      </section>
+    </aside>
   </main>
 
   <footer class="site-footer">

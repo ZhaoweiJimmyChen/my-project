@@ -11,6 +11,7 @@
   --text-serif: "Gentium Basic", "Gentium Book Plus", Georgia, serif;
   --heading-serif: "Lora", Georgia, serif;
   --utility-serif: "Libre Caslon Text", Georgia, serif;
+  --source-sans: "Open Sans", Arial, sans-serif;
   --page-width: 1129px;
 }
 
@@ -136,6 +137,236 @@ a:focus-visible {
 .nav-links a.active::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/* About page: profile composition modelled on the Jia Nan faculty profile. */
+.about-page .site-nav {
+  border-bottom: 0;
+}
+
+.person-profile {
+  width: min(calc(100% - 80px), 1178px);
+  margin: 0 auto;
+  padding: 85px 0 100px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  align-items: start;
+  column-gap: clamp(56px, 8vw, 112px);
+}
+
+.person-biography {
+  padding-top: 54px;
+}
+
+.person-biography h1 {
+  position: relative;
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 46px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+}
+
+.person-biography h1::before,
+.person-biography h1::after,
+.person-biography h1 span::before {
+  position: absolute;
+  left: -100px;
+  width: 90px;
+  height: 1px;
+  content: "";
+  opacity: 0.5;
+  border-top: 1px solid #8f8a8d;
+  border-bottom: 1px solid #8f8a8d;
+  transform: skewY(-22deg);
+  transform-origin: 100% 0;
+}
+
+.person-biography h1::before {
+  top: 11px;
+  padding: 8px 0 10px;
+}
+
+.person-biography h1::after {
+  top: 20px;
+  padding: 8px 0 10px;
+}
+
+.person-appointments {
+  margin: 24px 0 35px;
+  padding: 0;
+  list-style: none;
+  color: #545454;
+  font-family: var(--utility-serif);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.person-appointments li {
+  position: relative;
+  padding-left: 19px;
+}
+
+.person-appointments li::before {
+  position: absolute;
+  left: 0;
+  color: #990000;
+  content: "•";
+}
+
+.person-description {
+  max-width: 690px;
+  color: #282424;
+  font-family: var(--source-sans);
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.person-description p {
+  margin: 0;
+}
+
+.person-aside {
+  min-width: 0;
+}
+
+.portrait-frame {
+  position: relative;
+  width: min(100%, 320px);
+  margin-left: auto;
+  padding-right: 17px;
+  padding-bottom: 18px;
+}
+
+.portrait-frame::after {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - 9px);
+  height: calc(100% - 9px);
+  content: "";
+  background: #990000;
+}
+
+.portrait-flourish::before,
+.portrait-flourish::after {
+  position: absolute;
+  right: -6px;
+  width: 38px;
+  height: 1px;
+  padding: 8px 0 10px;
+  content: "";
+  opacity: 0.55;
+  border-top: 1px solid #990000;
+  border-bottom: 1px solid #990000;
+  transform: skewY(-30deg);
+  transform-origin: 0 0;
+}
+
+.portrait-flourish::before {
+  bottom: 21px;
+}
+
+.portrait-flourish::after {
+  bottom: 59px;
+}
+
+.about-page .profile-photo,
+.about-page .profile-placeholder {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 6 / 7;
+  border: 0;
+  border-radius: 0;
+}
+
+.about-page .profile-photo {
+  position: relative;
+  z-index: 1;
+  object-position: center 15%;
+}
+
+.about-page .profile-placeholder {
+  position: relative;
+  z-index: 1;
+  font-size: 56px;
+}
+
+.person-links {
+  margin-top: 34px;
+  padding-left: 20px;
+  color: #545454;
+  font-family: var(--source-sans);
+}
+
+.person-links address {
+  margin: 0;
+  padding: 13px 0;
+  border-top: 1px solid #b0b0b0;
+  border-bottom: 1px solid #b0b0b0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  line-height: 1.8;
+}
+
+.person-links address a,
+.person-links address span {
+  display: block;
+  color: #545454;
+  text-transform: uppercase;
+}
+
+.person-links nav {
+  display: grid;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+.person-links nav a {
+  width: fit-content;
+  color: #545454;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.person-links a:hover,
+.person-links a:focus-visible {
+  color: #990000;
+}
+
+.person-details {
+  margin: 35px 0 0;
+  padding-right: 20px;
+  color: #545454;
+  font-family: var(--source-sans);
+}
+
+.person-details h2 {
+  margin: 0 0 12px;
+  color: #282424;
+  font-family: var(--source-sans);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.person-details p {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 
 .profile-hero {
@@ -479,6 +710,55 @@ a:focus-visible {
     right: 2px;
     bottom: 2px;
     left: 2px;
+  }
+
+  .person-profile {
+    width: calc(100% - 32px);
+    padding: 39px 0 68px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+  }
+
+  .person-biography {
+    width: 100%;
+    padding-top: 0;
+    order: 2;
+  }
+
+  .person-biography h1 {
+    font-size: 38px;
+  }
+
+  .person-biography h1::before,
+  .person-biography h1::after,
+  .person-biography h1 span::before {
+    display: none;
+  }
+
+  .person-appointments {
+    margin: 18px 0 28px;
+    font-size: 15px;
+  }
+
+  .person-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .person-aside {
+    width: 100%;
+    order: 1;
+  }
+
+  .portrait-frame {
+    width: min(82%, 280px);
+    margin-left: 0;
+  }
+
+  .person-links,
+  .person-details {
+    max-width: 360px;
   }
 
   .hero-inner {
