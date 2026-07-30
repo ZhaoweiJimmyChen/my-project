@@ -99,6 +99,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 0.55rem;
   color: #9b9b9b;
   font-size: 16px;
@@ -638,8 +639,8 @@ a:focus-visible {
 .publication-citation {
   color: var(--body-ink);
   font-family: var(--text-serif);
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .publication-cue {
@@ -1079,8 +1080,8 @@ a:focus-visible {
 
   .publication-citation,
   .publication-detail p {
-    font-size: 14px;
-    line-height: 23px;
+    font-size: 15px;
+    line-height: 24px;
   }
 
   .publication-card.is-open .publication-detail {
