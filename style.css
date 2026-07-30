@@ -141,41 +141,40 @@ a:focus-visible {
 
 /* About page: profile composition modelled on the Jia Nan faculty profile. */
 .about-page .site-nav {
-  width: 100%;
-  min-height: 121px;
-  padding: 20px 50px 0;
-  display: grid;
-  grid-template-rows: 51px 40px;
-  justify-items: center;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 0;
+  width: min(calc(100% - 80px), var(--page-width));
+  min-height: 76px;
+  padding: 0;
+  display: flex;
+  justify-items: initial;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid var(--rule);
 }
 
 .about-page .site-mark {
   color: var(--ink);
   font-family: var(--display);
-  font-size: 26px;
-  letter-spacing: 0.02em;
+  font-size: 22px;
+  letter-spacing: 0;
 }
 
 .about-page .nav-links {
-  justify-content: center;
-  gap: 0;
-  font-family: var(--source-sans);
-  font-size: 12.5px;
-  font-weight: 800;
-  line-height: 16.25px;
-  text-transform: uppercase;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  font-family: var(--heading-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  text-transform: none;
 }
 
 .about-page .nav-links span {
-  display: none;
+  display: inline;
 }
 
 .about-page .nav-links a {
-  padding: 12px 10px;
-  color: var(--ink);
+  padding: 11.5px 4px;
+  color: var(--link-blue);
 }
 
 .person-profile {
@@ -573,13 +572,29 @@ a:focus-visible {
 }
 
 .research-publications .publication-card {
-  padding: 0;
   color: var(--body-ink);
 }
 
 .research-publications .publication-card:hover {
-  padding: 0;
   background: transparent;
+}
+
+.research-publications.numbered-list .publication-card {
+  padding: 0 0 0 58px;
+}
+
+.research-publications.numbered-list .publication-card:hover {
+  padding-left: 70px;
+}
+
+.research-publications.numbered-list .publication-card::before {
+  top: 28px;
+  color: var(--heading-blue);
+  font-size: 16px;
+}
+
+.research-publications.numbered-list .publication-card:first-child::before {
+  top: 28px;
 }
 
 .publication-toggle {
@@ -602,7 +617,7 @@ a:focus-visible {
 .publication-toggle:focus-visible,
 .publication-card.is-open .publication-toggle {
   padding-right: 12px;
-  padding-left: 12px;
+  padding-left: 16px;
   background: var(--soft-row);
 }
 
@@ -615,16 +630,16 @@ a:focus-visible {
   grid-column: 1 / -1;
   color: var(--heading-blue);
   font-family: var(--heading-serif);
-  font-size: 25.3333px;
+  font-size: 30px;
   font-weight: 400;
-  line-height: 35.4667px;
+  line-height: 40px;
 }
 
 .publication-citation {
   color: var(--body-ink);
   font-family: var(--text-serif);
-  font-size: 14.6667px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .publication-cue {
@@ -1036,6 +1051,20 @@ a:focus-visible {
   .publication-list li {
     font-size: 19px;
     line-height: 28px;
+  }
+
+  .research-publications.numbered-list .publication-card {
+    padding-left: 42px;
+  }
+
+  .research-publications.numbered-list .publication-card:hover {
+    padding-left: 48px;
+  }
+
+  .research-publications.numbered-list .publication-card::before,
+  .research-publications.numbered-list .publication-card:first-child::before {
+    top: 26px;
+    font-size: 14px;
   }
 
   .publication-toggle {
