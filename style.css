@@ -746,7 +746,11 @@ a:focus-visible {
   background: var(--soft-row);
 }
 
-.author-self,
+.author-self {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .journal-name {
   color: var(--heading-blue);
   font-weight: 700;
